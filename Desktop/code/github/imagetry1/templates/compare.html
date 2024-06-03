@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>이미지 비교</h1>
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="files">이미지 파일 선택 (2개)</label>
+        <input type="file" class="form-control-file" id="files" name="files" multiple>
+    </div>
+    <button type="submit" class="btn btn-primary">비교</button>
+</form>
+{% endblock %}

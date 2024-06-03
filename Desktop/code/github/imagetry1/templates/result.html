@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>분석 결과</h1>
+<img src="{{ url_for('uploaded_file', filename=image_url) }}" alt="업로드된 이미지" class="img-fluid">
+<p>{{ result }}</p>
+<a href="{{ url_for('upload_image') }}" class="btn btn-primary">다른 이미지 분석</a>
+{% endblock %}

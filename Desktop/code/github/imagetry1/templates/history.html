@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>분석 히스토리</h1>
+<div class="list-group">
+    {% for result in results %}
+    <div class="list-group-item">
+        <img src="{{ url_for('uploaded_file', filename=result.filename) }}" alt="분석된 이미지" class="img-fluid" style="width: 20%;">
+        <p>{{ result.result }}</p>
+        <small>{{ result.timestamp }}</small>
+    </div>
+    {% endfor %}
+</div>
+<a href="{{ url_for('upload_image') }}" class="btn btn-primary mt-3">새 이미지 분석</a>
+{% endblock %}

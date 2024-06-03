@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>비교 결과</h1>
+<img src="{{ url_for('uploaded_file', filename=diff_image_path) }}" alt="비교된 이미지" class="img-fluid">
+<a href="{{ url_for('compare') }}" class="btn btn-primary">다른 이미지 비교</a>
+{% endblock %}
